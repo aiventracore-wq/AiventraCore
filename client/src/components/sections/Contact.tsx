@@ -48,20 +48,34 @@ export const Contact: React.FC = () => {
         body: JSON.stringify(formData)
       });
 
-      const data = await response.json();
-
       if (response.ok) {
+        const data = await response.json();
         setStatus('success');
         setStatusMsg(data.message || 'Inquiry successfully processed.');
         setFormData({ name: '', email: '', organization: '', message: '' }); 
       } else {
         setStatus('error');
-        if (data.errors) {
-          setFieldErrors(data.errors);
-          setStatusMsg('Validation errors occurred. Please check the inputs below.');
-        } else {
-          setStatusMsg(data.message || 'Failed to submit enquiry.');
+        let errorMsg = 'Failed to submit enquiry.';
+        try {
+          const contentType = response.headers.get('content-type');
+          if (contentType && contentType.includes('application/json')) {
+            const data = await response.json();
+            if (data.errors) {
+              setFieldErrors(data.errors);
+              errorMsg = 'Validation errors occurred. Please check the inputs below.';
+            } else {
+              errorMsg = data.message || errorMsg;
+            }
+          } else {
+            const text = await response.text();
+            console.error('Non-JSON server response:', text);
+            errorMsg = `Server error (${response.status}). Please try again later.`;
+          }
+        } catch (jsonErr) {
+          console.error('Error handling non-ok response:', jsonErr);
+          errorMsg = `Server error (${response.status}). Please try again later.`;
         }
+        setStatusMsg(errorMsg);
       }
     } catch (err) {
       console.error('Contact Form Submission Error:', err);

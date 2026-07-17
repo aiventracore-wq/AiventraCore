@@ -19,6 +19,9 @@
   "devDependencies": {
     "concurrently": "^8.2.2"
   },
+  "dependencies": {
+    "googleapis": "^173.0.0"
+  },
   "engines": {
     "node": "20.x"
   }
