@@ -9,8 +9,9 @@ dist-ssr/
 **/dist-ssr/
 
 # Environment and credentials
-.env
+server/.env
 .env.local
+.env.development
 .env.*.local
 !.env.example
 **/google-credentials.json
@@ -35,3 +36,5 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
