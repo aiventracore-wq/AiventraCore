@@ -41,9 +41,14 @@ app.use((err, req, res, next) => {
 });
 
 // Launch listener
-app.listen(PORT, () => {
-  console.log(`-------------------------------------------------`);
-  console.log(` AiventraCore Backend service active on port ${PORT}`);
-  console.log(` Running mode: ${process.env.NODE_ENV || 'production'}`);
-  console.log(`-------------------------------------------------`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`-------------------------------------------------`);
+    console.log(` AiventraCore Backend service active on port ${PORT}`);
+    console.log(` Running mode: ${process.env.NODE_ENV || 'production'}`);
+    console.log(`-------------------------------------------------`);
+  });
+}
+
+module.exports = app;
+
