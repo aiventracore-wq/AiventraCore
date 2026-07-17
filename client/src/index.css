@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-offwhite: #E3E2DF;
+  --color-brand-grey: #E3AFBC;
+  --color-brand-teal: #9A1750;
+  --color-brand-brown: #5D001E;
+  --color-brand-cyan: #EE4C7C;
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+}
+
+@utility grid-lines {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(154, 23, 80, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(154, 23, 80, 0.05) 1px, transparent 1px);
+}
+
+@utility glass-nav {
+  background: rgba(227, 226, 223, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@utility card-elevation {
+  box-shadow: 4px 4px 0px 0px rgba(227, 175, 188, 0.3);
+}
+
+@utility card-elevation-hover {
+  &:hover {
+    box-shadow: 8px 8px 0px 0px rgba(154, 23, 80, 1);
+    transform: translate(-4px, -4px);
+  }
+}
+
+@utility gradient-mesh {
+  background-color: var(--color-brand-offwhite);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(227, 175, 188, 0.18) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(154, 23, 80, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(238, 76, 124, 0.14) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(93, 0, 30, 0.08) 0px, transparent 50%);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-offwhite text-slate-800 antialiased font-sans leading-relaxed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight text-brand-teal;
+  }
+}
+
+/* Custom Scrollbar for premium touch */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E3E2DF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E3AFBC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9A1750;
+}
+
+/* 3D card flip animation */
+.flip-container {
+  perspective: 1200px;
+  width: 100%;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-container:hover .flip-card {
+  transform: rotateY(180deg) rotateZ(180deg);
+  cursor: pointer;
+}
+
+.flip-front, .flip-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.flip-back {
+  transform: rotateY(180deg) rotateZ(180deg);
+  background: linear-gradient(-135deg, var(--color-brand-teal), var(--color-brand-brown));
+}
+
+@keyframes pathDraw {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.path-draw-animation {
+  animation: pathDraw 3s ease-in-out infinite alternate;
+}
+
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 10px 25px -5px rgba(154, 23, 80, 0.3);
+  }
+  50% {
+    box-shadow: 0 15px 35px -5px rgba(238, 76, 124, 0.5);
+  }
+  100% {
+    box-shadow: 0 10px 25px -5px rgba(154, 23, 80, 0.3);
+  }
+}
+
+.browser-pulse {
+  animation: shadowPulse 4s infinite ease-in-out;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-card-fade {
+  animation: cardFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
