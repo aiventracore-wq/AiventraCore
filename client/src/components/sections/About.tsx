@@ -23,6 +23,7 @@ interface Developer {
   status: string;
   bio: string;
   skills: string[];
+  imagePosition?: string;
 }
 
 export const About: React.FC = () => {
@@ -53,6 +54,7 @@ export const About: React.FC = () => {
       role: 'Web Designer & Data Analyst',
       id: 'ANL-0x12',
       image: khushi,
+      imagePosition: 'object-top',
       status: 'Active / Analytics',
       bio: 'Helps individuals and businesses create responsive websites while organizing, analyzing, and automating data workflows to deliver practical digital solutions.',
       skills: ['Web Design', 'Data Analysis', 'ETL & Pipelines', 'SQL', 'Power BI', 'Workflow Automation']
@@ -580,7 +582,7 @@ export const About: React.FC = () => {
                     <img 
                       src={dev.image} 
                       alt={dev.name} 
-                      className="w-full h-full object-cover transition-all duration-500 scale-105 group-hover:scale-100"
+                      className={`w-full h-full object-cover ${dev.imagePosition || 'object-center'} transition-all duration-500 scale-105 group-hover:scale-100`}
                     />
                     <div className="absolute bottom-0 left-0 w-full bg-brand-teal/90 text-brand-offwhite text-[7px] font-mono tracking-widest text-center py-0.5 uppercase">
                       {dev.id}
