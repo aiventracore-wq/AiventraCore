@@ -8,11 +8,15 @@ export default {
     extend: {
       colors: {
         brand: {
-          offwhite: '#E3E2DF',
-          grey: '#E3AFBC',
-          teal: '#9A1750',
-          brown: '#5D001E',
-          cyan: '#EE4C7C',
+          offwhite: '#FFFFFF',
+          border: '#E2E8F0',
+          'bg-light': '#F8FAFC',
+          maroon: '#9A1750',
+          'maroon-dark': '#5D001E',
+          teal: '#0D9488',
+          'teal-light': '#14B8A6',
+          'text-body': '#475569',
+          'text-heading': '#0F172A',
         }
       },
       fontFamily: {

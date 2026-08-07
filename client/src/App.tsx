@@ -7,10 +7,10 @@ import { Footer } from './components/sections/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-brand-offwhite text-slate-800 flex flex-col font-sans selection:bg-brand-teal selection:text-brand-offwhite">
+    <div className="min-h-screen bg-brand-offwhite text-brand-text-body flex flex-col font-sans selection:bg-brand-teal selection:text-brand-offwhite">
       {/* Structural layout border grids mapping the layout dimensions */}
-      <div className="fixed top-0 left-0 w-full h-[1px] bg-brand-grey/15 z-40 hidden lg:block" />
-      <div className="fixed bottom-0 left-0 w-full h-[1px] bg-brand-grey/15 z-40 hidden lg:block" />
+      <div className="fixed top-0 left-0 w-full h-[1px] bg-brand-border z-40 hidden lg:block" />
+      <div className="fixed bottom-0 left-0 w-full h-[1px] bg-brand-border z-40 hidden lg:block" />
       
       {/* Navigation Header */}
       <Header />

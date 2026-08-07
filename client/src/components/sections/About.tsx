@@ -237,17 +237,17 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-36 bg-brand-offwhite relative gradient-mesh">
       {/* Visual layouts borders */}
-      <div className="absolute top-0 left-12 w-[1px] h-full bg-brand-grey/15 hidden lg:block" />
-      <div className="absolute top-0 right-12 w-[1px] h-full bg-brand-grey/15 hidden lg:block" />
+      <div className="absolute top-0 left-12 w-[1px] h-full bg-brand-border hidden lg:block" />
+      <div className="absolute top-0 right-12 w-[1px] h-full bg-brand-border hidden lg:block" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         
         {/* Philosophy / Mission (Left Column - 6 Cols) */}
         <div className="lg:col-span-6 flex flex-col items-start text-left">
-          <span className="text-brand-brown font-mono text-xs uppercase tracking-widest font-semibold mb-3">
+          <span className="text-brand-maroon font-mono text-xs uppercase tracking-widest font-semibold mb-3">
             [ Company Philosophy ]
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-teal tracking-tight mb-8">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text-heading tracking-tight mb-8">
             Resilient Infrastructure Built for Mathematical Precision &amp; Infinite Scale
           </h2>
           
@@ -259,7 +259,7 @@ export const About: React.FC = () => {
               Instead of relying on boilerplate, non-scalable wrappers, our engineers design custom, dedicated pipelines. Every node network, cloud security VPC boundary, and analytics dashboard is tuned for maximum throughput.
             </p>
             
-            <div className="grid grid-cols-2 gap-6 pt-4 border-t border-brand-grey/30">
+            <div className="grid grid-cols-2 gap-6 pt-4 border-t border-brand-border">
               <div>
                 <span className="block font-heading font-extrabold text-brand-teal text-xl md:text-2xl">99.99%</span>
                 <span className="text-xs text-slate-500 font-medium">Data Pipeline Uptime SLA</span>
@@ -273,10 +273,10 @@ export const About: React.FC = () => {
         </div>
 
         {/* Timeline / Diagram (Right Column - 6 Cols) */}
-        <div className="lg:col-span-6 flex flex-col bg-white border border-brand-grey/30 p-8 shadow-sm">
+        <div className="lg:col-span-6 flex flex-col bg-white border border-brand-border p-8 shadow-sm">
           
           {/* Tab Selection */}
-          <div className="flex border-b border-brand-grey/30 mb-6 font-sans">
+          <div className="flex border-b border-brand-border mb-6 font-sans">
             <button 
               onClick={() => setActiveTab('blueprint')}
               className={`flex-1 pb-3 text-[10px] font-bold uppercase tracking-wider text-center border-b-2 transition-all cursor-pointer ${
@@ -313,13 +313,13 @@ export const About: React.FC = () => {
                       className={`flex items-start gap-4 p-4 border transition-all duration-300 cursor-pointer select-none ${
                         isActive 
                           ? 'border-brand-teal bg-brand-teal/5 text-brand-teal shadow-sm translate-x-2' 
-                          : 'border-brand-grey/25 bg-transparent hover:border-brand-grey text-slate-700'
+                          : 'border-brand-border bg-transparent hover:border-brand-teal text-slate-700'
                       }`}
                     >
                       <div className={`w-8 h-8 border flex items-center justify-center font-mono text-xs font-bold transition-all ${
                         isActive 
                           ? 'border-brand-teal bg-brand-teal text-brand-offwhite' 
-                          : 'border-brand-grey bg-brand-offwhite text-brand-teal'
+                          : 'border-brand-border bg-brand-offwhite text-brand-teal'
                       }`}>
                         <StageIcon size={16} />
                       </div>
@@ -338,7 +338,7 @@ export const About: React.FC = () => {
               </div>
 
               {/* Active Stage Blueprint Details */}
-              <div className="border-t border-brand-grey/30 pt-6 min-h-[160px] flex flex-col justify-between">
+              <div className="border-t border-brand-border pt-6 min-h-[160px] flex flex-col justify-between">
                 <div>
                   <div className="flex flex-wrap gap-2 mb-3">
                     {stages[activeStage].tech.map((t, idx) => (
@@ -352,7 +352,7 @@ export const About: React.FC = () => {
                   </p>
                 </div>
                 
-                <div className="bg-brand-offwhite border-l-2 border-brand-brown p-3 font-mono text-[10px] text-brand-brown select-none">
+                <div className="bg-brand-bg-light border-l-2 border-brand-teal p-3 font-mono text-[10px] text-brand-teal select-none">
                   <span className="font-bold">SYSTEM TELEMETRY:</span> {stages[activeStage].metrics}
                 </div>
               </div>
@@ -382,7 +382,7 @@ export const About: React.FC = () => {
                         className={`text-left text-xs p-2 border transition-all cursor-pointer font-sans font-semibold bg-brand-offwhite/30 ${
                           source === item.id 
                             ? 'border-brand-teal bg-brand-teal/5 text-brand-teal' 
-                            : 'border-brand-grey/35 text-slate-600 hover:border-brand-grey'
+                            : 'border-brand-border text-slate-600 hover:border-brand-teal'
                         }`}
                       >
                         {item.name}
@@ -409,7 +409,7 @@ export const About: React.FC = () => {
                         className={`text-left text-xs p-2 border transition-all cursor-pointer font-sans font-semibold bg-brand-offwhite/30 ${
                           operation === item.id 
                             ? 'border-brand-teal bg-brand-teal/5 text-brand-teal' 
-                            : 'border-brand-grey/35 text-slate-600 hover:border-brand-grey'
+                            : 'border-brand-border text-slate-600 hover:border-brand-teal'
                         }`}
                       >
                         {item.name}
@@ -436,7 +436,7 @@ export const About: React.FC = () => {
                         className={`text-left text-xs p-2 border transition-all cursor-pointer font-sans font-semibold bg-brand-offwhite/30 ${
                           destination === item.id 
                             ? 'border-brand-teal bg-brand-teal/5 text-brand-teal' 
-                            : 'border-brand-grey/35 text-slate-600 hover:border-brand-grey'
+                            : 'border-brand-border text-slate-600 hover:border-brand-teal'
                         }`}
                       >
                         {item.name}
@@ -459,9 +459,9 @@ export const About: React.FC = () => {
                   </button>
                 ) : isRunning ? (
                   <div className="space-y-2">
-                    <div className="w-full bg-brand-grey/20 h-1.5 overflow-hidden">
+                    <div className="w-full bg-slate-200 h-1.5 overflow-hidden">
                       <div 
-                        className="bg-brand-brown h-full transition-all duration-100 ease-out" 
+                        className="bg-brand-teal h-full transition-all duration-100 ease-out" 
                         style={{ width: `${progress}%` }}
                       />
                     </div>
@@ -482,7 +482,7 @@ export const About: React.FC = () => {
               </div>
 
               {/* Logs output / report console */}
-              <div className="border border-brand-grey/30 bg-brand-offwhite/50 p-4 font-mono text-[10px] leading-relaxed relative min-h-[120px]">
+              <div className="border border-brand-border bg-brand-bg-light/50 p-4 font-mono text-[10px] leading-relaxed relative min-h-[120px]">
                 <div className="absolute top-2 right-2 text-slate-400 flex items-center gap-1">
                   <Terminal size={10} />
                   <span className="text-[8px] tracking-wider select-none">STREAM_LOG</span>
@@ -495,35 +495,35 @@ export const About: React.FC = () => {
                     </div>
                   ))}
                   {isRunning && (
-                    <span className="inline-block w-1.5 h-3 bg-brand-brown animate-pulse ml-1" />
+                    <span className="inline-block w-1.5 h-3 bg-brand-teal animate-pulse ml-1" />
                   )}
                 </div>
 
                 {/* Finalized metrics summary */}
                 {report && (
-                  <div className="border-t border-brand-grey/20 pt-4 mt-2 grid grid-cols-2 gap-4">
-                    <div className="bg-white border border-brand-grey/20 p-2.5 flex items-start gap-2 shadow-sm">
+                  <div className="border-t border-brand-border pt-4 mt-2 grid grid-cols-2 gap-4">
+                    <div className="bg-white border border-brand-border p-2.5 flex items-start gap-2 shadow-sm">
                       <CheckCircle2 size={14} className="text-brand-teal mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="block text-[8px] uppercase tracking-wider text-slate-400 font-bold">Throughput</span>
                         <span className="text-xs font-heading font-extrabold text-brand-teal">{report.throughput}</span>
                       </div>
                     </div>
-                    <div className="bg-white border border-brand-grey/20 p-2.5 flex items-start gap-2 shadow-sm">
+                    <div className="bg-white border border-brand-border p-2.5 flex items-start gap-2 shadow-sm">
                       <CheckCircle2 size={14} className="text-brand-teal mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="block text-[8px] uppercase tracking-wider text-slate-400 font-bold">End-to-End Latency</span>
                         <span className="text-xs font-heading font-extrabold text-brand-teal">{report.latency}</span>
                       </div>
                     </div>
-                    <div className="bg-white border border-brand-grey/20 p-2.5 flex items-start gap-2 shadow-sm">
+                    <div className="bg-white border border-brand-border p-2.5 flex items-start gap-2 shadow-sm">
                       <CheckCircle2 size={14} className="text-brand-teal mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="block text-[8px] uppercase tracking-wider text-slate-400 font-bold">Data Compression</span>
                         <span className="text-xs font-heading font-extrabold text-brand-teal">{report.compression}</span>
                       </div>
                     </div>
-                    <div className="bg-white border border-brand-grey/20 p-2.5 flex items-start gap-2 shadow-sm">
+                    <div className="bg-white border border-brand-border p-2.5 flex items-start gap-2 shadow-sm">
                       <CheckCircle2 size={14} className="text-brand-teal mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="block text-[8px] uppercase tracking-wider text-slate-400 font-bold">Ingest Health</span>
@@ -543,7 +543,7 @@ export const About: React.FC = () => {
 
       {/* Horizontal Divider with increased breathing space */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 my-28">
-        <div className="h-[1px] bg-brand-grey/20 w-full" />
+        <div className="h-[1px] bg-brand-border w-full" />
       </div>
 
       {/* Engineering Core / Developer Section with top margin spacing */}
@@ -553,10 +553,10 @@ export const About: React.FC = () => {
             <Users size={20} />
           </div>
           <div>
-            <span className="text-brand-brown font-mono text-[10px] uppercase tracking-widest font-semibold block">
+            <span className="text-brand-maroon font-mono text-[10px] uppercase tracking-widest font-semibold block">
               [ Core Contributors ]
             </span>
-            <h3 className="text-2xl md:text-3xl font-extrabold text-brand-teal tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-brand-text-heading tracking-tight">
               Architects of the Streaming Ledger
             </h3>
           </div>
@@ -570,13 +570,13 @@ export const About: React.FC = () => {
               className="w-full flex-shrink-0 animate-card-fade"
             >
               <div 
-                className="card-elevation bg-white border border-brand-grey/30 p-6 flex flex-col sm:flex-row gap-6 transition-all duration-300 card-elevation-hover relative overflow-hidden h-full group"
+                className="card-elevation bg-white border border-brand-border p-6 flex flex-col sm:flex-row gap-6 transition-all duration-300 card-elevation-hover relative overflow-hidden h-full group"
               >
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-brand-teal/5 to-transparent rounded-bl-full pointer-events-none" />
 
                 {/* Left Column: Photo & Tech Info */}
                 <div className="w-full sm:w-28 flex-shrink-0 flex flex-col items-center select-none">
-                  <div className="w-28 h-28 border-2 border-brand-teal bg-brand-offwhite relative overflow-hidden group-hover:border-brand-brown transition-colors duration-300">
+                  <div className="w-28 h-28 border-2 border-brand-teal bg-brand-offwhite relative overflow-hidden group-hover:border-brand-teal-light transition-colors duration-300">
                     <img 
                       src={dev.image} 
                       alt={dev.name} 
@@ -588,7 +588,7 @@ export const About: React.FC = () => {
                   </div>
                   
                   {/* Status under photo */}
-                  <div className="mt-3 flex items-center gap-1.5 bg-brand-offwhite/50 border border-brand-grey/25 px-2 py-0.5 rounded-sm">
+                  <div className="mt-3 flex items-center gap-1.5 bg-brand-offwhite/50 border border-brand-border px-2 py-0.5 rounded-sm">
                     <span className="relative flex h-1.5 w-1.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
@@ -602,13 +602,13 @@ export const About: React.FC = () => {
                 {/* Right Column: Profile Info & Tech Stack */}
                 <div className="flex-grow flex flex-col justify-between text-left">
                   <div>
-                    <h4 className="text-base font-extrabold text-brand-teal tracking-tight group-hover:text-brand-brown transition-colors duration-300">
+                    <h4 className="text-base font-extrabold text-brand-text-heading tracking-tight group-hover:text-brand-teal transition-colors duration-300">
                       {dev.name}
                     </h4>
-                    <p className="text-[10px] text-brand-brown font-mono font-bold uppercase tracking-wider mb-2">
+                    <p className="text-[10px] text-brand-teal font-mono font-bold uppercase tracking-wider mb-2">
                       {dev.role}
                     </p>
-                    <p className="text-xs text-slate-600 font-sans leading-relaxed mb-4">
+                    <p className="text-xs text-brand-text-body font-sans leading-relaxed mb-4">
                       {dev.bio}
                     </p>
                   </div>
@@ -635,7 +635,7 @@ export const About: React.FC = () => {
         <div className="flex items-center justify-center gap-6 mt-8 select-none">
           <button 
             onClick={handlePrev}
-            className="w-10 h-10 border border-brand-grey/40 hover:border-brand-teal text-brand-teal hover:bg-brand-teal/5 flex items-center justify-center transition-all cursor-pointer card-elevation hover:translate-y-[-2px] rounded-none"
+            className="w-10 h-10 border border-brand-border hover:border-brand-teal text-brand-teal hover:bg-brand-teal/5 flex items-center justify-center transition-all cursor-pointer card-elevation hover:translate-y-[-2px] rounded-none"
           >
             <ChevronLeft size={18} />
           </button>
@@ -648,7 +648,7 @@ export const About: React.FC = () => {
                 className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   activeIndex === idx 
                     ? 'bg-brand-teal w-6' 
-                    : 'bg-brand-grey/40 hover:bg-brand-grey w-2'
+                    : 'bg-brand-border hover:bg-brand-teal w-2'
                 }`}
               />
             ))}
@@ -656,7 +656,7 @@ export const About: React.FC = () => {
 
           <button 
             onClick={handleNext}
-            className="w-10 h-10 border border-brand-grey/40 hover:border-brand-teal text-brand-teal hover:bg-brand-teal/5 flex items-center justify-center transition-all cursor-pointer card-elevation hover:translate-y-[-2px] rounded-none"
+            className="w-10 h-10 border border-brand-border hover:border-brand-teal text-brand-teal hover:bg-brand-teal/5 flex items-center justify-center transition-all cursor-pointer card-elevation hover:translate-y-[-2px] rounded-none"
           >
             <ChevronRight size={18} />
           </button>

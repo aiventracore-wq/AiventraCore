@@ -87,20 +87,20 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-36 bg-white border-t border-brand-grey/25 relative">
+    <section id="contact" className="py-36 bg-white border-t border-brand-border relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Company Details (Left - 5 Cols) */}
           <div className="lg:col-span-5 flex flex-col justify-between text-left">
             <div>
-              <span className="text-brand-brown font-mono text-xs uppercase tracking-widest font-semibold block mb-3">
+              <span className="text-brand-maroon font-mono text-xs uppercase tracking-widest font-semibold block mb-3">
                 [ Contact Directory ]
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-brand-teal tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text-heading tracking-tight mb-6">
                 Connect with our Systems Architect Team
               </h2>
-              <p className="text-slate-500 font-sans text-sm md:text-base leading-relaxed mb-8">
+              <p className="text-brand-text-body font-sans text-sm md:text-base leading-relaxed mb-8">
                 Ready to review your cloud infrastructure or data pipelines? 
                 Provide your structural requirements and we will compile a diagnostic proposal.
               </p>
@@ -108,37 +108,37 @@ export const Contact: React.FC = () => {
               {/* Info Items */}
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 border border-brand-teal/20 flex items-center justify-center bg-brand-teal/5 text-brand-teal">
+                  <div className="w-10 h-10 border border-brand-teal/20 flex items-center justify-center bg-brand-teal/5 text-brand-teal flex-shrink-0">
                     <Mail size={18} />
                   </div>
                   <div>
                     <span className="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">Secure Mail</span>
-                    <a href="mailto:solutions@aiventracore.com" className="text-sm font-semibold text-brand-teal hover:underline">
-                      solutions@aiventracore.com
+                    <a href="mailto:aiventracore@gmail.com" className="text-sm font-semibold text-brand-teal hover:underline">
+                      aiventracore@gmail.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 border border-brand-teal/20 flex items-center justify-center bg-brand-teal/5 text-brand-teal">
+                  <div className="w-10 h-10 border border-brand-teal/20 flex items-center justify-center bg-brand-teal/5 text-brand-teal flex-shrink-0">
                     <Phone size={18} />
                   </div>
                   <div>
                     <span className="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">Secure Telephony</span>
-                    <a href="tel:+18005550199" className="text-sm font-semibold text-brand-teal hover:underline">
-                      +1 (800) 555-0199 (Ext 4)
+                    <a href="tel:+919113888581" className="text-sm font-semibold text-brand-teal hover:underline">
+                      +91 91138 88581
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 border border-brand-teal/20 flex items-center justify-center bg-brand-teal/5 text-brand-teal">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 border border-brand-teal/20 flex items-center justify-center bg-brand-teal/5 text-brand-teal flex-shrink-0 mt-0.5">
                     <MapPin size={18} />
                   </div>
                   <div>
                     <span className="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">Command Office</span>
-                    <span className="text-sm font-semibold text-brand-teal">
-                      Suite 900, Tech Gateway, Silicon Valley, CA
+                    <span className="text-sm font-semibold text-brand-teal leading-snug block">
+                      Basawanagar, 2nd Cross, Karnataka 560037
                     </span>
                   </div>
                 </div>
@@ -146,19 +146,19 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Operating Model Note */}
-            <div className="mt-12 p-4 bg-brand-offwhite/50 border border-brand-grey/20 font-sans text-xs text-slate-500 leading-relaxed">
+            <div className="mt-12 p-4 bg-brand-bg-light/60 border border-brand-border font-sans text-xs text-brand-text-body leading-relaxed">
               <span className="font-bold text-brand-teal block mb-1">Operating Model SLA:</span>
               Our response engine operates 24/7. System analysis proposals are scheduled and delivered within 1 business day of ingest validation.
             </div>
           </div>
 
           {/* Contact Form Container (Right - 7 Cols) */}
-          <div className="lg:col-span-7 bg-brand-offwhite/20 border border-brand-grey/30 p-8 md:p-10">
+          <div className="lg:col-span-7 bg-brand-bg-light/40 border border-brand-border p-8 md:p-10">
             <div className="mb-6">
-              <h3 className="font-heading font-bold text-lg text-brand-teal">
+              <h3 className="font-heading font-bold text-lg text-brand-text-heading">
                 Enter Ingestion Payload
               </h3>
-              <p className="text-slate-500 text-xs font-sans mt-1">
+              <p className="text-brand-text-body text-xs font-sans mt-1">
                 Tell us about your project or data pipeline requirements.
               </p>
             </div>
@@ -197,7 +197,7 @@ export const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     placeholder=" "
-                    className="w-full bg-transparent border-b border-brand-grey focus:border-brand-teal outline-none py-3 text-sm transition-all duration-300 font-sans focus:placeholder-transparent placeholder-slate-400"
+                    className="w-full bg-transparent border-b border-brand-border focus:border-brand-teal outline-none py-3 text-sm transition-all duration-300 font-sans focus:placeholder-transparent placeholder-slate-400"
                   />
                   <label 
                     htmlFor="name" 
@@ -222,7 +222,7 @@ export const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     placeholder=" "
-                    className="w-full bg-transparent border-b border-brand-grey focus:border-brand-teal outline-none py-3 text-sm transition-all duration-300 font-sans focus:placeholder-transparent placeholder-slate-400"
+                    className="w-full bg-transparent border-b border-brand-border focus:border-brand-teal outline-none py-3 text-sm transition-all duration-300 font-sans focus:placeholder-transparent placeholder-slate-400"
                   />
                   <label 
                     htmlFor="email" 
@@ -247,7 +247,7 @@ export const Contact: React.FC = () => {
                   value={formData.organization}
                   onChange={handleChange}
                   placeholder=" "
-                  className="w-full bg-transparent border-b border-brand-grey focus:border-brand-teal outline-none py-3 text-sm transition-all duration-300 font-sans focus:placeholder-transparent placeholder-slate-400"
+                  className="w-full bg-transparent border-b border-brand-border focus:border-brand-teal outline-none py-3 text-sm transition-all duration-300 font-sans focus:placeholder-transparent placeholder-slate-400"
                 />
                 <label 
                   htmlFor="organization" 
@@ -272,7 +272,7 @@ export const Contact: React.FC = () => {
                   required
                   rows={4}
                   placeholder=" "
-                  className="w-full bg-transparent border-b border-brand-grey focus:border-brand-teal outline-none py-3 text-sm transition-all duration-300 font-sans resize-none focus:placeholder-transparent placeholder-slate-400"
+                  className="w-full bg-transparent border-b border-brand-border focus:border-brand-teal outline-none py-3 text-sm transition-all duration-300 font-sans resize-none focus:placeholder-transparent placeholder-slate-400"
                 />
                 <label 
                   htmlFor="message" 
@@ -291,7 +291,7 @@ export const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-brand-brown hover:bg-brand-brown/95 disabled:bg-brand-brown/70 text-brand-offwhite py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300 ease-in-out border-2 border-brand-brown flex items-center justify-center gap-3 rounded-none cursor-pointer"
+                className="w-full bg-brand-maroon-dark hover:bg-brand-maroon disabled:bg-brand-maroon-dark/70 text-brand-offwhite py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300 ease-in-out border-2 border-brand-maroon-dark hover:border-brand-maroon flex items-center justify-center gap-3 rounded-none cursor-pointer"
               >
                 {submitting ? (
                   <>

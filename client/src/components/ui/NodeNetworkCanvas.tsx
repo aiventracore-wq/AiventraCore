@@ -75,7 +75,7 @@ export const NodeNetworkCanvas: React.FC = () => {
           y: h * 0.45,
           name: 'Kafka Ingress',
           role: 'API GATEWAY',
-          color: '#9A1750', // brand.teal
+          color: '#0D9488', // brand.teal
           pulse: 0,
           alertMsg: 'DECRYPTED'
         },
@@ -84,7 +84,7 @@ export const NodeNetworkCanvas: React.FC = () => {
           y: h * 0.60,
           name: 'Spark ETL Core',
           role: 'PROCESSOR',
-          color: '#5D001E', // brand.brown
+          color: '#14B8A6', // brand.teal-light
           pulse: 0,
           alertMsg: 'ETL_MERGE'
         },
@@ -93,7 +93,7 @@ export const NodeNetworkCanvas: React.FC = () => {
           y: h * 0.35,
           name: 'OLAP Columnar',
           role: 'STORAGE',
-          color: '#9A1750', // brand.teal
+          color: '#0D9488', // brand.teal
           pulse: 0,
           alertMsg: 'DB_COMMIT'
         }
@@ -133,7 +133,7 @@ export const NodeNetworkCanvas: React.FC = () => {
           targetIndex: 0,
           size: Math.random() * 3 + 3,
           speed: Math.random() * 1.5 + 2.5,
-          color: '#5D001E',
+          color: '#0D9488',
           pulseTimer: 0
         });
       }
@@ -159,7 +159,7 @@ export const NodeNetworkCanvas: React.FC = () => {
         ctx.lineTo(stations[2].x, stations[2].y);
         ctx.lineTo(w, h * 0.35);
       }
-      ctx.strokeStyle = 'rgba(227, 175, 188, 0.35)'; // brand.grey
+      ctx.strokeStyle = 'rgba(13, 148, 136, 0.25)'; // brand.teal faint
       ctx.lineWidth = 1.5;
       ctx.stroke();
       ctx.setLineDash([]); // Reset line dash
@@ -175,7 +175,7 @@ export const NodeNetworkCanvas: React.FC = () => {
         
         // Draw outer pulse wave
         ctx.arc(st.x, st.y, outerPulse, 0, Math.PI * 2);
-        ctx.strokeStyle = st.color === '#9A1750' ? `rgba(154, 23, 80, ${st.pulse})` : `rgba(93, 0, 30, ${st.pulse})`;
+        ctx.strokeStyle = st.color === '#0D9488' ? `rgba(13, 148, 136, ${st.pulse})` : `rgba(20, 184, 166, ${st.pulse})`;
         ctx.lineWidth = 1.5;
         ctx.stroke();
 
@@ -206,7 +206,7 @@ export const NodeNetworkCanvas: React.FC = () => {
           targetIndex: 0,
           size: Math.random() * 2.5 + 2,
           speed: Math.random() * 0.8 + 1.2,
-          color: '#E3AFBC', // grey initially
+          color: '#CBD5E1', // slate-300 initially
           pulseTimer: 0
         });
       }
@@ -294,7 +294,7 @@ export const NodeNetworkCanvas: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(pkt.x, pkt.y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = 'rgba(93, 0, 30, 0.15)'; // faint burgundy/red
+            ctx.strokeStyle = 'rgba(13, 148, 136, 0.15)'; // faint teal
             ctx.lineWidth = 0.5;
             ctx.stroke();
             
@@ -349,7 +349,7 @@ export const NodeNetworkCanvas: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-full border border-brand-grey/30 relative bg-white/60 overflow-hidden select-none">
+    <div className="w-full h-full border border-brand-border relative bg-white/60 overflow-hidden select-none">
       <canvas 
         ref={canvasRef} 
         className="w-full h-full block cursor-pointer"

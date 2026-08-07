@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
-import logo from '../../assets/final_logo1-removebg-preview.png';
+import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
+import logo from '../../assets/final_logo_according_to_theme-removebg-preview.png';
 
 export const Footer: React.FC = () => {
   const handleScrollTop = () => {
@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-offwhite relative overflow-hidden">
       {/* Elegant Top Node Border */}
-      <div className="w-full relative h-[1px] bg-brand-grey/30 flex items-center justify-center">
+      <div className="w-full relative h-[1px] bg-brand-border flex items-center justify-center">
         <div className="absolute w-4 h-4 bg-brand-offwhite border border-brand-teal rounded-full flex items-center justify-center">
           <span className="w-1.5 h-1.5 bg-brand-teal rounded-full animate-pulse" />
         </div>
@@ -31,10 +31,10 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-8 relative z-10">
 
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
           {/* Company Brief */}
-          <div className="md:col-span-2 flex flex-col items-start text-left">
+          <div className="flex flex-col items-start text-left">
             <div
               onClick={() => handleScrollTo('home')}
               className="flex items-center gap-3 mb-4 select-none cursor-pointer group"
@@ -44,19 +44,19 @@ export const Footer: React.FC = () => {
                 alt="AiventraCore Logo"
                 className="h-14 w-auto object-contain max-h-[56px]"
               />
-              <span className="font-heading font-bold text-base tracking-tight text-brand-teal group-hover:text-brand-brown transition-colors duration-300">
+              <span className="font-heading font-bold text-base tracking-tight text-brand-maroon group-hover:text-brand-maroon-dark transition-colors duration-300">
                 AiventraCore
               </span>
             </div>
-            <p className="text-xs text-slate-500 font-sans max-w-sm leading-relaxed">
+            <p className="text-xs text-slate-500 font-sans leading-relaxed">
               Enterprise data engineering and cloud architectural systems configured for speed, scale, and algorithmic intelligence.
             </p>
           </div>
 
           {/* Sitemap links with bracket indicators */}
           <div className="flex flex-col items-start text-left">
-            <span className="text-[10px] uppercase font-bold tracking-widest text-brand-teal mb-4 select-none flex items-center gap-1">
-              <span className="text-brand-brown">[</span> Navigation <span className="text-brand-brown">]</span>
+            <span className="text-[10px] uppercase font-bold tracking-widest text-brand-maroon mb-4 select-none flex items-center gap-1">
+              <span className="text-brand-maroon">[</span> Navigation <span className="text-brand-maroon">]</span>
             </span>
             <ul className="space-y-2 text-xs font-medium text-slate-600 font-sans">
               {['Home', 'Services', 'About', 'Contact'].map((item) => (
@@ -72,10 +72,37 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Contact Details */}
+          <div className="flex flex-col items-start text-left">
+            <span className="text-[10px] uppercase font-bold tracking-widest text-brand-maroon mb-4 select-none flex items-center gap-1">
+              <span className="text-brand-maroon">[</span> Contact Details <span className="text-brand-maroon">]</span>
+            </span>
+            <ul className="space-y-2.5 text-xs text-slate-600 font-sans">
+              <li className="flex items-center gap-2">
+                <Mail size={14} className="text-brand-teal shrink-0" />
+                <a href="mailto:aiventracore@gmail.com" className="hover:text-brand-teal hover:underline transition-colors">
+                  aiventracore@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone size={14} className="text-brand-teal shrink-0" />
+                <a href="tel:+919113888581" className="hover:text-brand-teal hover:underline transition-colors">
+                  +91-9113888581
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={14} className="text-brand-teal shrink-0 mt-0.5" />
+                <span className="leading-snug">
+                  Basawanagar, 2nd Cross 560037, KARNATAKA
+                </span>
+              </li>
+            </ul>
+          </div>
+
           {/* Legal and compliance with bracket indicators */}
           <div className="flex flex-col items-start text-left">
-            <span className="text-[10px] uppercase font-bold tracking-widest text-brand-teal mb-4 select-none flex items-center gap-1">
-              <span className="text-brand-brown">[</span> Enterprise Compliance <span className="text-brand-brown">]</span>
+            <span className="text-[10px] uppercase font-bold tracking-widest text-brand-maroon mb-4 select-none flex items-center gap-1">
+              <span className="text-brand-maroon">[</span> Enterprise Compliance <span className="text-brand-maroon">]</span>
             </span>
             <ul className="space-y-2 text-xs font-medium text-slate-600 font-sans">
               <li>
@@ -96,7 +123,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-brand-grey/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="border-t border-brand-border pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-[11px] text-slate-500 font-mono">
             © {new Date().getFullYear()} AiventraCore. All rights reserved. // Engineered with mathematical precision.
           </div>
@@ -104,7 +131,7 @@ export const Footer: React.FC = () => {
           {/* Scroll to Top Trigger */}
           <button
             onClick={handleScrollTop}
-            className="w-10 h-10 border border-brand-grey/50 flex items-center justify-center text-slate-600 hover:border-brand-teal hover:text-brand-teal transition-all bg-transparent cursor-pointer rounded-none"
+            className="w-10 h-10 border border-brand-border flex items-center justify-center text-slate-600 hover:border-brand-teal hover:text-brand-teal transition-all bg-transparent cursor-pointer rounded-none"
             aria-label="Scroll to top"
           >
             <ArrowUp size={16} />
