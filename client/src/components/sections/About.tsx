@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Layers, Database, Cpu, CheckSquare, Play, RefreshCw, Terminal, CheckCircle2, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import rakesh from '../../assets/rakesh.jpg';
-import devVikram from '../../assets/dev_vikram.png';
+import santana from '../../assets/santana.png';
 import devSarah from '../../assets/dev_sarah.png';
 import devElena from '../../assets/dev_elena.png';
 import devMarcus from '../../assets/dev_marcus.png';
@@ -40,13 +40,13 @@ export const About: React.FC = () => {
       skills: ['AWS', 'Databricks', 'Snowflake', 'Apache Spark', 'Python', 'Power BI']
     },
     {
-      name: 'Vikram Malhotra',
-      role: 'Principal Infrastructure Architect',
-      id: 'SYS-0x09',
-      image: devVikram,
-      status: 'Node Active',
-      bio: "Designed AiventraCore's zero-copy stream deserializer and sharding configuration protocols for real-time Kafka ingest nodes.",
-      skills: ['Rust', 'Apache Kafka', 'Wasm', 'Kubernetes']
+      name: 'Santana Acharjya',
+      role: 'Digital Marketing & Customer Support Specialist',
+      id: 'MKT-0x09',
+      image: santana,
+      status: 'Active / Growth',
+      bio: 'Specializes in driving brand growth through tailored digital marketing strategies while maintaining high client retention through empathetic, efficient customer support and workflow optimization.',
+      skills: ['Digital Marketing', 'Customer Service', 'Social Media', 'Client Support', 'Brand Engagement']
     },
     {
       name: 'Sarah Chen',
