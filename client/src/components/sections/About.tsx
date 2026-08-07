@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Layers, Database, Cpu, CheckSquare, Play, RefreshCw, Terminal, CheckCircle2, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import rakesh from '../../assets/rakesh.jpg';
 import santana from '../../assets/santana.png';
-import devSarah from '../../assets/dev_sarah.png';
+import khushi from '../../assets/khushi.png';
 import devElena from '../../assets/dev_elena.png';
 import devMarcus from '../../assets/dev_marcus.png';
 
@@ -49,13 +49,13 @@ export const About: React.FC = () => {
       skills: ['Digital Marketing', 'Customer Service', 'Social Media', 'Client Support', 'Brand Engagement']
     },
     {
-      name: 'Sarah Chen',
-      role: 'Lead Data Platform Engineer',
-      id: 'SYS-0x12',
-      image: devSarah,
-      status: 'Pipeline Syncing',
-      bio: 'Architected the parallel ETL mapping layer that streams and transforms over 1.2M metrics/sec with automated schema evolution.',
-      skills: ['Apache Spark', 'ClickHouse', 'dbt', 'Golang']
+      name: 'Khushi Jain',
+      role: 'Web Designer & Data Analyst',
+      id: 'ANL-0x12',
+      image: khushi,
+      status: 'Active / Analytics',
+      bio: 'Helps individuals and businesses create responsive websites while organizing, analyzing, and automating data workflows to deliver practical digital solutions.',
+      skills: ['Web Design', 'Data Analysis', 'ETL & Pipelines', 'SQL', 'Power BI', 'Workflow Automation']
     },
     {
       name: 'Dr. Elena Rostova',
