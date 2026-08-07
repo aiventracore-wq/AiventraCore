@@ -54,7 +54,7 @@ export const About: React.FC = () => {
       role: 'Web Designer & Data Analyst',
       id: 'ANL-0x12',
       image: khushi,
-      imagePosition: 'object-top',
+      imagePosition: 'object-center',
       status: 'Active / Analytics',
       bio: 'Helps individuals and businesses create responsive websites while organizing, analyzing, and automating data workflows to deliver practical digital solutions.',
       skills: ['Web Design', 'Data Analysis', 'ETL & Pipelines', 'SQL', 'Power BI', 'Workflow Automation']
