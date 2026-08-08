@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Layers, Database, Cpu, CheckSquare, Play, RefreshCw, Terminal, CheckCircle2, Users, ChevronLeft, ChevronRight } from 'lucide-react';
-import rakesh from '../../assets/rakesh.jpg';
+import rakesh from '../../assets/rakesh.png';
 import santana from '../../assets/santana.png';
 import khushi from '../../assets/khushi.png';
 import devElena from '../../assets/dev_elena.png';
@@ -45,6 +45,7 @@ export const About: React.FC = () => {
       role: 'Digital Marketing & Customer Support Specialist',
       id: 'MKT-0x09',
       image: santana,
+      imagePosition: 'object-center',
       status: 'Active / Growth',
       bio: 'Specializes in driving brand growth through tailored digital marketing strategies while maintaining high client retention through empathetic, efficient customer support and workflow optimization.',
       skills: ['Digital Marketing', 'Customer Service', 'Social Media', 'Client Support', 'Brand Engagement']
